@@ -14,12 +14,14 @@ namespace DevData.ViewModels
         public string Login { get; set; }
         public string Password { get; set; }
         public ICommand TestConnectionCommand { get; set; }
+        public ICommand GetAllData { get; set; }
         #endregion
 
         #region Constructor
         public WorkMainPageViewModel()
         {
             TestConnectionCommand = new RelayCommand(TestConnectionDb);
+            GetAllData = new RelayCommand(GetAllDataDb);
         }
         #endregion
 
@@ -29,7 +31,7 @@ namespace DevData.ViewModels
             var lg = Login;
             var pass = Password;
         }
-        private void GetAllData()
+        private void GetAllDataDb()
         {
 
         }
