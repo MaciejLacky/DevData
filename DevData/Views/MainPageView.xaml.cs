@@ -21,10 +21,11 @@ namespace DevData
     /// </summary>
     public partial class MainPage : Page
     {
+        WorkMainPageViewModel workMainPageViewModel = new WorkMainPageViewModel();
         public MainPage()
         {
             InitializeComponent();
-            DataContext = new WorkMainPageViewModel();
+            this.DataContext = workMainPageViewModel;
         }
     }
 }

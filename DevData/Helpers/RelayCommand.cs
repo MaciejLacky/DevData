@@ -8,12 +8,12 @@ using System.Windows.Input;
 namespace DevData.Helpers
 {
     public class RelayCommand : ICommand
-       
+
     {
         private Action _action;
         public RelayCommand(Action action)
         {
-            _action = action;   
+            _action = action;
         }
 
         public event EventHandler? CanExecuteChanged;
@@ -26,6 +26,8 @@ namespace DevData.Helpers
         public void Execute(object? parameter)
         {
             _action();
+
         }
+
     }
 }
